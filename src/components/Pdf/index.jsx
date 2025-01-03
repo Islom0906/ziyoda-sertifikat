@@ -1,5 +1,6 @@
 import {Document, Font, Image, Page, StyleSheet, Text, View} from "@react-pdf/renderer";
 import backgroundImage from '../../assets/abstract-gradient-pink-blue-liquid-wave-background-free-vector.jpg'
+import signature from '../../assets/photo_2025-01-03_11-50-20-removebg-preview.png'
 import logo from '../../assets/logo.png'
 import RobotoMono from '../../assets/fonts/RobotoMono-Regular.ttf'
 import Dancing from '../../assets/fonts/DancingScript-Regular.ttf'
@@ -122,8 +123,12 @@ const styles = StyleSheet.create({
         fontFamily: 'Dancing',
         fontWeight: 'normal',
         color:'#37406e'
+    },
+    signature:{
+        width:'100px',
+        height:'40px',
+        // objectFit:'contain'
     }
-
 });
 
 const PDF = ({data}) => {
@@ -171,7 +176,7 @@ const PDF = ({data}) => {
                             <Image style={styles.logo} src={logo}/>
                         </View>
                         <View style={styles.date}>
-                            {/*<Image/>*/}
+                            <Image src={signature} style={styles.signature}/>
                             <View style={styles.dateLine}/>
                             <Text style={styles.dateText}>
                                 Imzo
